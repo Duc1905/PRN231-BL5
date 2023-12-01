@@ -1,10 +1,12 @@
 {
   "version": 2,
-  "dgSpecHash": "j+Emynqd6sR4LpcG9N1f+MNalGV+zJJVj+G6ZOulvZEMkiQCcXPUbTZjotukT83Slu3wHhaKe92JKVVU4fKPuA==",
+  "dgSpecHash": "mPpUOPBgfR+WtAuf1QPiD++Ad3F4HLG+m9xg6MQ4EctBNsPd6InAK9gz1z7hqETDA8if/6MDjiIgqBDbgqMSqQ==",
   "success": true,
   "projectFilePath": "D:\\PRN231\\PRN231-BL5\\Lab01_ASP.NETCoreWebAPI\\DataAccess\\DataAccess.csproj",
   "expectedPackageFiles": [
-    "C:\\Users\\Dell\\.nuget\\packages\\microsoft.csharp\\4.5.0\\microsoft.csharp.4.5.0.nupkg.sha512",
+    "C:\\Users\\Dell\\.nuget\\packages\\automapper\\12.0.1\\automapper.12.0.1.nupkg.sha512",
+    "C:\\Users\\Dell\\.nuget\\packages\\automapper.extensions.microsoft.dependencyinjection\\12.0.1\\automapper.extensions.microsoft.dependencyinjection.12.0.1.nupkg.sha512",
+    "C:\\Users\\Dell\\.nuget\\packages\\microsoft.csharp\\4.7.0\\microsoft.csharp.4.7.0.nupkg.sha512",
     "C:\\Users\\Dell\\.nuget\\packages\\microsoft.data.sqlclient\\2.1.4\\microsoft.data.sqlclient.2.1.4.nupkg.sha512",
     "C:\\Users\\Dell\\.nuget\\packages\\microsoft.data.sqlclient.sni.runtime\\2.1.1\\microsoft.data.sqlclient.sni.runtime.2.1.1.nupkg.sha512",
     "C:\\Users\\Dell\\.nuget\\packages\\microsoft.entityframeworkcore\\6.0.1\\microsoft.entityframeworkcore.6.0.1.nupkg.sha512",

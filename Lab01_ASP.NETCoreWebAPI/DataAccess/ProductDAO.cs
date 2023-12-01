@@ -16,7 +16,42 @@ public class ProductDAO
             {
                 products = context.Products.ToList();
             }
-        } catch (Exception ex)
+        }
+        catch (Exception ex)
+        {
+            throw new Exception(ex.Message);
+        }
+        return products;
+    }
+
+    public static List<Product> GetProducts(int[] ids)
+    {
+        var products = new List<Product>();
+        try
+        {
+            using (var context = new MyDbContext())
+            {
+                products = context.Products.Where(p => ids.Contains(p.ProductId)).ToList();
+            }
+        }
+        catch (Exception ex)
+        {
+            throw new Exception(ex.Message);
+        }
+        return products;
+    }
+
+    public static List<Product> GetProducts(decimal minPrice, decimal maxPrice)
+    {
+        var products = new List<Product>();
+        try
+        {
+            using (var context = new MyDbContext())
+            {
+                products = context.Products.Where(p => p.UnitPrice >= minPrice && p.UnitPrice <= maxPrice).ToList();
+            }
+        }
+        catch (Exception ex)
         {
             throw new Exception(ex.Message);
         }
@@ -76,6 +111,22 @@ public class ProductDAO
             {
                 var p1 = context.Products.SingleOrDefault(x => x.ProductId == p.ProductId);
                 context.Products.Remove(p1);
+                context.SaveChanges();
+            }
+        }
+        catch (Exception ex)
+        {
+            throw new Exception(ex.Message);
+        }
+    }
+
+    public static void DeleteProducts(Product[] ps)
+    {
+        try
+        {
+            using (var context = new MyDbContext())
+            {
+                context.Products.RemoveRange(ps);
                 context.SaveChanges();
             }
         }
