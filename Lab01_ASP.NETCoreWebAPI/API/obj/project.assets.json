@@ -2360,11 +2360,11 @@
   "project": {
     "version": "1.0.0",
     "restore": {
-      "projectUniqueName": "D:\\PRN231\\Lab01_ASP.NETCoreWebAPI\\API\\API.csproj",
+      "projectUniqueName": "D:\\PRN231\\PRN231-BL5\\Lab01_ASP.NETCoreWebAPI\\API\\API.csproj",
       "projectName": "API",
-      "projectPath": "D:\\PRN231\\Lab01_ASP.NETCoreWebAPI\\API\\API.csproj",
+      "projectPath": "D:\\PRN231\\PRN231-BL5\\Lab01_ASP.NETCoreWebAPI\\API\\API.csproj",
       "packagesPath": "C:\\Users\\Dell\\.nuget\\packages\\",
-      "outputPath": "D:\\PRN231\\Lab01_ASP.NETCoreWebAPI\\API\\obj\\",
+      "outputPath": "D:\\PRN231\\PRN231-BL5\\Lab01_ASP.NETCoreWebAPI\\API\\obj\\",
       "projectStyle": "PackageReference",
       "configFilePaths": [
         "C:\\Users\\Dell\\AppData\\Roaming\\NuGet\\NuGet.Config",
@@ -2381,8 +2381,8 @@
         "net6.0": {
           "targetAlias": "net6.0",
           "projectReferences": {
-            "D:\\PRN231\\Lab01_ASP.NETCoreWebAPI\\Repositories\\Repositories.csproj": {
-              "projectPath": "D:\\PRN231\\Lab01_ASP.NETCoreWebAPI\\Repositories\\Repositories.csproj"
+            "D:\\PRN231\\PRN231-BL5\\Lab01_ASP.NETCoreWebAPI\\Repositories\\Repositories.csproj": {
+              "projectPath": "D:\\PRN231\\PRN231-BL5\\Lab01_ASP.NETCoreWebAPI\\Repositories\\Repositories.csproj"
             }
           }
         }

@@ -1,17 +1,17 @@
 {
   "format": 1,
   "restore": {
-    "D:\\PRN231\\Lab01_ASP.NETCoreWebAPI\\Repositories\\Repositories.csproj": {}
+    "D:\\PRN231\\PRN231-BL5\\Lab01_ASP.NETCoreWebAPI\\Repositories\\Repositories.csproj": {}
   },
   "projects": {
-    "D:\\PRN231\\Lab01_ASP.NETCoreWebAPI\\BussinessObjects\\BussinessObjects.csproj": {
+    "D:\\PRN231\\PRN231-BL5\\Lab01_ASP.NETCoreWebAPI\\BussinessObjects\\BussinessObjects.csproj": {
       "version": "1.0.0",
       "restore": {
-        "projectUniqueName": "D:\\PRN231\\Lab01_ASP.NETCoreWebAPI\\BussinessObjects\\BussinessObjects.csproj",
+        "projectUniqueName": "D:\\PRN231\\PRN231-BL5\\Lab01_ASP.NETCoreWebAPI\\BussinessObjects\\BussinessObjects.csproj",
         "projectName": "BussinessObjects",
-        "projectPath": "D:\\PRN231\\Lab01_ASP.NETCoreWebAPI\\BussinessObjects\\BussinessObjects.csproj",
+        "projectPath": "D:\\PRN231\\PRN231-BL5\\Lab01_ASP.NETCoreWebAPI\\BussinessObjects\\BussinessObjects.csproj",
         "packagesPath": "C:\\Users\\Dell\\.nuget\\packages\\",
-        "outputPath": "D:\\PRN231\\Lab01_ASP.NETCoreWebAPI\\BussinessObjects\\obj\\",
+        "outputPath": "D:\\PRN231\\PRN231-BL5\\Lab01_ASP.NETCoreWebAPI\\BussinessObjects\\obj\\",
         "projectStyle": "PackageReference",
         "configFilePaths": [
           "C:\\Users\\Dell\\AppData\\Roaming\\NuGet\\NuGet.Config",
@@ -78,14 +78,14 @@
         }
       }
     },
-    "D:\\PRN231\\Lab01_ASP.NETCoreWebAPI\\DataAccess\\DataAccess.csproj": {
+    "D:\\PRN231\\PRN231-BL5\\Lab01_ASP.NETCoreWebAPI\\DataAccess\\DataAccess.csproj": {
       "version": "1.0.0",
       "restore": {
-        "projectUniqueName": "D:\\PRN231\\Lab01_ASP.NETCoreWebAPI\\DataAccess\\DataAccess.csproj",
+        "projectUniqueName": "D:\\PRN231\\PRN231-BL5\\Lab01_ASP.NETCoreWebAPI\\DataAccess\\DataAccess.csproj",
         "projectName": "DataAccess",
-        "projectPath": "D:\\PRN231\\Lab01_ASP.NETCoreWebAPI\\DataAccess\\DataAccess.csproj",
+        "projectPath": "D:\\PRN231\\PRN231-BL5\\Lab01_ASP.NETCoreWebAPI\\DataAccess\\DataAccess.csproj",
         "packagesPath": "C:\\Users\\Dell\\.nuget\\packages\\",
-        "outputPath": "D:\\PRN231\\Lab01_ASP.NETCoreWebAPI\\DataAccess\\obj\\",
+        "outputPath": "D:\\PRN231\\PRN231-BL5\\Lab01_ASP.NETCoreWebAPI\\DataAccess\\obj\\",
         "projectStyle": "PackageReference",
         "configFilePaths": [
           "C:\\Users\\Dell\\AppData\\Roaming\\NuGet\\NuGet.Config",
@@ -102,8 +102,8 @@
           "net6.0": {
             "targetAlias": "net6.0",
             "projectReferences": {
-              "D:\\PRN231\\Lab01_ASP.NETCoreWebAPI\\BussinessObjects\\BussinessObjects.csproj": {
-                "projectPath": "D:\\PRN231\\Lab01_ASP.NETCoreWebAPI\\BussinessObjects\\BussinessObjects.csproj"
+              "D:\\PRN231\\PRN231-BL5\\Lab01_ASP.NETCoreWebAPI\\BussinessObjects\\BussinessObjects.csproj": {
+                "projectPath": "D:\\PRN231\\PRN231-BL5\\Lab01_ASP.NETCoreWebAPI\\BussinessObjects\\BussinessObjects.csproj"
               }
             }
           }
@@ -136,14 +136,14 @@
         }
       }
     },
-    "D:\\PRN231\\Lab01_ASP.NETCoreWebAPI\\Repositories\\Repositories.csproj": {
+    "D:\\PRN231\\PRN231-BL5\\Lab01_ASP.NETCoreWebAPI\\Repositories\\Repositories.csproj": {
       "version": "1.0.0",
       "restore": {
-        "projectUniqueName": "D:\\PRN231\\Lab01_ASP.NETCoreWebAPI\\Repositories\\Repositories.csproj",
+        "projectUniqueName": "D:\\PRN231\\PRN231-BL5\\Lab01_ASP.NETCoreWebAPI\\Repositories\\Repositories.csproj",
         "projectName": "Repositories",
-        "projectPath": "D:\\PRN231\\Lab01_ASP.NETCoreWebAPI\\Repositories\\Repositories.csproj",
+        "projectPath": "D:\\PRN231\\PRN231-BL5\\Lab01_ASP.NETCoreWebAPI\\Repositories\\Repositories.csproj",
         "packagesPath": "C:\\Users\\Dell\\.nuget\\packages\\",
-        "outputPath": "D:\\PRN231\\Lab01_ASP.NETCoreWebAPI\\Repositories\\obj\\",
+        "outputPath": "D:\\PRN231\\PRN231-BL5\\Lab01_ASP.NETCoreWebAPI\\Repositories\\obj\\",
         "projectStyle": "PackageReference",
         "configFilePaths": [
           "C:\\Users\\Dell\\AppData\\Roaming\\NuGet\\NuGet.Config",
@@ -160,11 +160,11 @@
           "net6.0": {
             "targetAlias": "net6.0",
             "projectReferences": {
-              "D:\\PRN231\\Lab01_ASP.NETCoreWebAPI\\BussinessObjects\\BussinessObjects.csproj": {
-                "projectPath": "D:\\PRN231\\Lab01_ASP.NETCoreWebAPI\\BussinessObjects\\BussinessObjects.csproj"
+              "D:\\PRN231\\PRN231-BL5\\Lab01_ASP.NETCoreWebAPI\\BussinessObjects\\BussinessObjects.csproj": {
+                "projectPath": "D:\\PRN231\\PRN231-BL5\\Lab01_ASP.NETCoreWebAPI\\BussinessObjects\\BussinessObjects.csproj"
               },
-              "D:\\PRN231\\Lab01_ASP.NETCoreWebAPI\\DataAccess\\DataAccess.csproj": {
-                "projectPath": "D:\\PRN231\\Lab01_ASP.NETCoreWebAPI\\DataAccess\\DataAccess.csproj"
+              "D:\\PRN231\\PRN231-BL5\\Lab01_ASP.NETCoreWebAPI\\DataAccess\\DataAccess.csproj": {
+                "projectPath": "D:\\PRN231\\PRN231-BL5\\Lab01_ASP.NETCoreWebAPI\\DataAccess\\DataAccess.csproj"
               }
             }
           }
