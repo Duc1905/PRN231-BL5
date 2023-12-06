@@ -4,6 +4,7 @@ using Microsoft.AspNetCore.OData.Routing;
 using Microsoft.EntityFrameworkCore;
 using Microsoft.OData.Edm;
 using Microsoft.OData.ModelBuilder;
+using Microsoft.AspNetCore.OData.Routing;
 
 namespace API
 {
@@ -21,7 +22,7 @@ namespace API
             services.AddDbContext<BookStoreContext>(opt => opt.UseInMemoryDatabase("BookLists"));
             services.AddControllers();
 
-            services.AddControllers().AddOData(option => option.Select().Filter().Count().OrderBy().Expand().SetMaxTop(100).AddRouteComponents("odata", IEdmModel()))
+            services.AddControllers().AddOData(option => option.Select().Filter().Count().OrderBy().Expand().SetMaxTop(100).AddRouteComponents("odata", GetEdmModel()));
         }
 
         public void Configure(IApplicationBuilder app, IWebHostEnvironment env)
@@ -50,11 +51,9 @@ namespace API
             });
 
             app.UseAuthorization();
-
-            app.UseEndpoints(endpoints => { });
         }
 
-        private static IEdmModel IEdmModel()
+        private static IEdmModel GetEdmModel()
         {
             ODataConventionModelBuilder builder = new ODataConventionModelBuilder();
             builder.EntitySet<Book>("Books");

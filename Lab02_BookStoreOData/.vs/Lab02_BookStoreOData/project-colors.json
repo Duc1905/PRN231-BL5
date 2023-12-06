@@ -1,0 +1,16 @@
+{
+  "Version": 1,
+  "ProjectMap": {
+    "98849552-741d-4519-982a-cd2dedd3ea82": {
+      "ProjectGuid": "98849552-741d-4519-982a-cd2dedd3ea82",
+      "DisplayName": "API",
+      "ColorIndex": 0
+    },
+    "d51cd99d-f20b-485c-bf70-5789dc773eb8": {
+      "ProjectGuid": "d51cd99d-f20b-485c-bf70-5789dc773eb8",
+      "DisplayName": "App",
+      "ColorIndex": 1
+    }
+  },
+  "NextColorIndex": 2
+}
