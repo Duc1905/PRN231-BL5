@@ -1,0 +1,75 @@
+﻿@*
+    For more information on enabling MVC for empty projects, visit https://go.microsoft.com/fwlink/?LinkID=397860
+*@
+@{
+}
+
+<div class="container-fluid">
+    <h2>Product List</h2>
+    <table>
+        <thead>
+            <tr>
+                <th>ProductID</th>
+                <th>Product Name</th>
+                <th>Quantity</th>
+                <th>Unit Price</th>
+                <th>Update</th>
+                <th>Delete</th>
+            </tr>
+        </thead>
+        <tbody></tbody>
+    </table>
+</div>
+
+<script type="text/javascript">
+    $(document).ready(()=>{
+        var tbody = $("table tbody");
+        var apiProductEnpoint = "http://localhost:5294/api/Product";
+        var showAllProducts = () => {
+            tbody.html("");
+            $.ajax({
+                url: apiProductEnpoint,
+                type: "get",
+                contentType: "application/json; charset=utf-8",
+                dataType: "json",
+                success: (result, status, xhr) => {
+                    $.each(result, (index, value) => {
+                        tbody.append(`
+                            <tr data-id="${value["productID"]}">
+                                <td>${value["productID"]}</td>
+                                <td>${value["productName"]}</td>
+                                <td>${value["unitsInStock"]}</td>
+                                <td>${value["unitPrice"]}</td>
+                                <td><a class="js-edit" >Edit</a></td>
+                                <td><a class="js-delete" >Delete</a></td>
+                            </tr>
+                        `);
+                    })
+                },
+                error: (xhr, status, error) => {
+                    console.log(xhr);
+                }
+            })
+        };
+        var initItemEvents = () => {
+            tbody.on("click", "js-delete", ()=>{
+                var productID = $(this).closest("tr").data("id");
+                $.ajax({
+                    url: `${apiProductEnpoint}/${productID}`,
+                    type: "delete",
+                    contentType: "application/json; charset=utf-8",
+                    dataType: "json",
+                    success: (result, status, xhr) => {
+                        showAllProducts();
+                    },
+                    error: (xhr, status, error) => {
+                        console.log(xhr);
+                    }
+                });
+            });
+        };
+
+        showAllProducts();
+        initItemEvents();
+    });
+</script>
