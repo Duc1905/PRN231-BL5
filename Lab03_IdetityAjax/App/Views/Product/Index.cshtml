@@ -20,8 +20,8 @@
         <tbody></tbody>
     </table>
 </div>
-
-<script type="text/javascript">
+@section Scripts {
+  <script type="text/javascript">
     $(document).ready(()=>{
         var tbody = $("table tbody");
         var apiProductEnpoint = "http://localhost:5294/api/Product";
@@ -34,13 +34,14 @@
                 dataType: "json",
                 success: (result, status, xhr) => {
                     $.each(result, (index, value) => {
+                        console.log(value)
                         tbody.append(`
-                            <tr data-id="${value["productID"]}">
-                                <td>${value["productID"]}</td>
+                            <tr data-id="${value["productId"]}">
+                                <td>${value["productId"]}</td>
                                 <td>${value["productName"]}</td>
                                 <td>${value["unitsInStock"]}</td>
                                 <td>${value["unitPrice"]}</td>
-                                <td><a class="js-edit" >Edit</a></td>
+                                <td><a class="js-edit" href="/${value["productId"]}" >Edit</a></td>
                                 <td><a class="js-delete" >Delete</a></td>
                             </tr>
                         `);
@@ -73,3 +74,4 @@
         initItemEvents();
     });
 </script>
+}
