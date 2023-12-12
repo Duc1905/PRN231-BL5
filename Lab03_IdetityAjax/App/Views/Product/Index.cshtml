@@ -9,10 +9,10 @@
     <table>
         <thead>
             <tr>
-                <th>ProductID</th>
+                <th class="js-sorting" data-field="productId">ProductID</th>
                 <th>Product Name</th>
                 <th>Quantity</th>
-                <th>Unit Price</th>
+                <th class="js-sorting" data-field="unitPrice">Unit Price</th>
                 <th>Update</th>
                 <th>Delete</th>
             </tr>
@@ -24,9 +24,15 @@
   <script type="text/javascript">
     $(document).ready(()=>{
         var tbody = $("table tbody");
+        var thead = $("table thead");
         var apiProductEnpoint = "http://localhost:5294/api/Product";
+        var products = [];
+        var id_asc = 1;
+        var price_asc = 1;
+
         var showAllProducts = () => {
             tbody.html("");
+            products = [];
             $.ajax({
                 url: apiProductEnpoint,
                 type: "get",
@@ -34,7 +40,7 @@
                 dataType: "json",
                 success: (result, status, xhr) => {
                     $.each(result, (index, value) => {
-                        console.log(value)
+                        products.push(value);
                         tbody.append(`
                             <tr data-id="${value["productId"]}">
                                 <td>${value["productId"]}</td>
@@ -52,8 +58,8 @@
                 }
             })
         };
-        var initItemEvents = () => {
-            tbody.on("click", "js-delete", ()=>{
+        var initEvents = () => {
+            tbody.on("click", ".js-delete", function(){
                 var productID = $(this).closest("tr").data("id");
                 $.ajax({
                     url: `${apiProductEnpoint}/${productID}`,
@@ -68,10 +74,42 @@
                     }
                 });
             });
+
+            thead.on("click", ".js-sorting", function() {
+                var field = $(this).data("field");
+                if (field != "productId" && field != "unitPrice"){
+                    return console.log("Not supported!");
+                }
+
+                if (field == "productId"){
+                    products = products.sort((a, b) => id_asc * (a.productId - b.productId));
+                    id_asc*= -1;
+                }
+
+                if (field == "unitPrice"){
+                    products = products.sort((a, b) => price_asc * (a.unitPrice - b.unitPrice));
+                    price_asc*= -1;
+                }
+
+                tbody.html("");
+
+                $.each(products, (index, value) => {
+                        tbody.append(`
+                            <tr data-id="${value["productId"]}">
+                                <td class="js-sorting" data-field="productId">${value["productId"]}</td>
+                                <td>${value["productName"]}</td>
+                                <td>${value["unitsInStock"]}</td>
+                                <td class="js-sorting" data-field="unitPrice">${value["unitPrice"]}</td>
+                                <td><a class="js-edit" href="/${value["productId"]}" >Edit</a></td>
+                                <td><a class="js-delete" >Delete</a></td>
+                            </tr>
+                        `);
+                    })
+            });
         };
 
         showAllProducts();
-        initItemEvents();
+        initEvents();
     });
 </script>
 }
